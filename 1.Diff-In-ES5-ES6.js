@@ -65,7 +65,7 @@ console.log(person);
  * 10. Module & Export
  * 11. Map, set, weakSet, and weakMap
  * 12. Symbol datatype to make unique identifiers strings/variable
- * 13. leading bang! - to call/invoked anonymous function (es5 gives syntax error while defining anonymous function)
+ * 13. Leading bang! - to call/invoked anonymous function (es5 gives syntax error while defining anonymous function)
  * (SyntaxError: Function statements require a function name)
 */
 //leading bang! (if we remove ! it gives error for tht we need to wrap it)
