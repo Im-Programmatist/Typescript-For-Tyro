@@ -1,0 +1,2 @@
+1. Practice - use of declaration file
+2. Use of tsconfig.json
