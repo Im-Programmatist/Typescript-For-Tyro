@@ -166,3 +166,8 @@ console.log('Generic Data Types:',typeof(output1), typeof(output2));
 // let cObj  = new C();
 // cObj.f();
 // cObj.method();
+
+//Object And Array type define
+let dataObject :{name:string, phone:number} = {name:"Chetan", phone:9527364127};
+let dataArray:string[] = ["chetan","korde", "kalgavahan"];
+let dataArrayNumber:number[] = [1,2,3,4]
