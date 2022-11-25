@@ -186,7 +186,6 @@ let output1 = helloWorldFun<string>("myString");  //Type of function return is s
 let output2 = helloWorldFun<number>( 100 );  //Type of function return is number 
 console.log('Generic Data Types:',typeof(output1), typeof(output2));
 
-
 //Decorators
 //We are going to attache one function to class as a method of that class itself
 // function f():any {  
