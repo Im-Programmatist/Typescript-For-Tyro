@@ -70,6 +70,7 @@ console.log('undefined type- ', typeof(num1), typeof(bool1), typeof(str1));
 
 console.warn('Nulland undefined can set to all types...')
 
+//value of any datatype not check wile use or if returned from any function
 let val: any = 'Hi';
 console.log("Any data types - ",typeof(val));    
 val = 555; // OK
@@ -88,6 +89,41 @@ let a: [string, number];
 //a = ["hi", 8, "hrlsdv", 10.8]; 
 a = ["hi", 8]; // OK 
 console.log('Touple  Data type', typeof(a));
+
+// Unknown Data type
+console.log('Unknown Data type....>');
+let notSure: unknown = 4;
+notSure = "maybe a string instead";
+// OK, definitely a boolean
+notSure = false;
+
+// a variable with an unknown type, we can do typeof checks, comparison checks,or can make type guards  
+//declare is used for variable already declared and tell compiler to not need to compile this here it is already come before this occupance
+//declare let maybe: unknown; this line will skip type checking in compiler and giver error if variable not defined earlier
+let maybe: unknown;
+// 'maybe' could be a string, object, boolean, undefined, or other types
+//const aNumber: number = maybe; //Type 'unknown' is not assignable to type 'number'.
+console.log('before type of maybe unknown datatype', typeof(maybe));
+maybe = true;
+if (maybe === true) //here we made may be variable as boolean
+{
+  // TypeScript knows that maybe is a boolean now
+  const aBoolean: boolean = maybe;
+  console.log('after boolean assignment- type of maybe unknown datatype', typeof(maybe));
+  // So, it cannot be a string
+  //const aString: string = maybe;
+}
+maybe = '';
+if (typeof maybe === "string") //here we made maybe as string
+{
+  // TypeScript knows that maybe is a string
+  const aString: string = maybe;
+  console.log('after string assignment- type of maybe unknown datatype', typeof(maybe));
+  // So, it cannot be a boolean
+  //const aBoolean: boolean = maybe;
+}
+
+
 
 //Interface 
 interface Calc {  
@@ -171,3 +207,7 @@ console.log('Generic Data Types:',typeof(output1), typeof(output2));
 let dataObject :{name:string, phone:number} = {name:"Chetan", phone:9527364127};
 let dataArray:string[] = ["chetan","korde", "kalgavahan"];
 let dataArrayNumber:number[] = [1,2,3,4]
+
+// Never
+// The never type represents the type of values that never occur.
+// never is the return type for a function expression or an arrow function expression that always throws an exception or one that never returns.
